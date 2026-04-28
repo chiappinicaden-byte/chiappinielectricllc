@@ -25,7 +25,7 @@
 –white: #FFFFFF;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
 font-family: ‘Playfair Display’, Georgia, serif;
@@ -152,6 +152,7 @@ display: grid;
 grid-template-columns: 1fr 1fr;
 position: relative;
 overflow: hidden;
+max-width: 100vw;
 }
 .hero-bg {
 position: absolute;
@@ -400,7 +401,7 @@ color: #F0EDE8;
 }
 
 /* –– SECTION COMMONS –– */
-section { padding: 100px 80px; }
+section { padding: 100px 80px; max-width: 100%; overflow-x: hidden; }
 .section-label {
 font-size: 13px;
 font-weight: 800;
@@ -861,6 +862,13 @@ margin-top: 16px;
 .menu-toggle { display: none; }
 
 @media (max-width: 900px) {
+.hero-right { display: none; }
+.hero { grid-template-columns: 1fr; }
+[style*=“grid-template-columns:1fr 1fr”],
+[style*=“grid-template-columns: 1fr 1fr”],
+[style*=“grid-template-columns:repeat(3”] {
+grid-template-columns: 1fr !important;
+}
 .topbar { padding: 8px 20px; font-size: 12px; }
 .logo-banner-img { max-height: 140px; }
 nav { padding: 0 20px; justify-content: space-between; }
@@ -890,7 +898,7 @@ footer { padding: 60px 24px 40px; }
 <!-- TOP BAR -->
 
 <div class="topbar">
-<span>📍 Serving Grove City, Mercer, Slippery Rock & Surrounding Areas</span>
+<span>📍 Serving Mercer, Venango & Butler County</span>
 <div class="topbar-right">
 <span>Mon–Thurs: 8AM–5PM</span>
 <a href="tel:+17249922361">☎ (724) 992-2361</a>
