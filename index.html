@@ -909,12 +909,19 @@ grid-template-columns: 1fr !important;
 .hero-right { display: none !important; }
 /* Fix section padding */
 section { padding: 60px 20px !important; }
+.hero-left { padding: 40px 20px !important; width: 100% !important; }
+.hero h1 { font-size: 52px !important; line-height: 1 !important; }
+.hero-badge { font-size: 11px !important; }
+.hero-sub { font-size: 16px !important; }
+.btn-primary, .btn-secondary { width: 100% !important; justify-content: center !important; box-sizing: border-box !important; }
+.hero-actions { flex-direction: column !important; width: 100% !important; }
+.logo-banner-img { object-position: center center !important; }
 #reviews { padding: 60px 20px !important; }
 /* Fix footer grid */
 .footer-grid { grid-template-columns: 1fr !important; }
 /* Prevent any overflow */
-* { max-width: 100% !important; box-sizing: border-box !important; }
-img { max-width: 100% !important; height: auto !important; }
+body, section, .hero, nav, footer, .trust-bar, .cta-band { max-width: 100vw !important; overflow-x: hidden !important; }
+img { max-width: 100% !important; height: auto; }
 /* Fix trust bar */
 .trust-bar { padding: 20px !important; flex-direction: column !important; }
 /* Fix hero stats */
