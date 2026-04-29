@@ -861,76 +861,85 @@ margin-top: 16px;
 /* –– MOBILE MENU TOGGLE (hidden by default) –– */
 .menu-toggle { display: none; }
 
-@media (max-width: 900px) {
-.hero-right { display: none; }
-.hero { grid-template-columns: 1fr; }
-[style*=“grid-template-columns:1fr 1fr”],
-[style*=“grid-template-columns: 1fr 1fr”],
-[style*=“grid-template-columns:repeat(3”] {
+@media (max-width: 768px) {
+html, body {
+overflow-x: hidden !important;
+width: 100% !important;
+}
+.topbar {
+padding: 8px 16px !important;
+font-size: 11px !important;
+flex-direction: column !important;
+gap: 4px !important;
+}
+.topbar-right { gap: 12px !important; }
+nav { padding: 0 16px !important; justify-content: space-between !important; }
+.nav-links { display: none !important; }
+.menu-toggle { display: block !important; background: none !important; border: none !important; color: #C9A84C !important; font-size: 24px !important; cursor: pointer !important; }
+.logo-banner-img { max-height: 120px !important; }
+.hero {
+display: block !important;
+width: 100% !important;
+min-height: auto !important;
+}
+.hero-left {
+padding: 40px 16px !important;
+width: 100% !important;
+box-sizing: border-box !important;
+}
+.hero-right { display: none !important; }
+.hero-bg::after { display: none !important; }
+.hero h1 { font-size: 44px !important; line-height: 1.05 !important; }
+.hero-sub { font-size: 15px !important; max-width: 100% !important; }
+.hero-badge { font-size: 10px !important; }
+.hero-actions { flex-direction: column !important; gap: 12px !important; }
+.btn-primary, .btn-secondary {
+width: 100% !important;
+justify-content: center !important;
+box-sizing: border-box !important;
+padding: 14px 20px !important;
+}
+.hero-stats { gap: 16px !important; flex-wrap: wrap !important; }
+.trust-bar {
+padding: 16px !important;
+flex-direction: column !important;
+gap: 12px !important;
+}
+section { padding: 50px 16px !important; }
+#reviews { padding: 50px 16px !important; }
+#gallery { padding: 50px 16px !important; }
+.services-grid { grid-template-columns: 1fr !important; }
+.faq-grid { grid-template-columns: 1fr !important; }
+#about {
+display: block !important;
+padding: 50px 16px !important;
+}
+.about-visual { display: none !important; }
+.about-card-grid { grid-template-columns: 1fr 1fr !important; margin-bottom: 30px !important; }
+.reviews-grid { grid-template-columns: 1fr !important; }
+.reviews-header { flex-direction: column !important; }
+.footer-grid { grid-template-columns: 1fr !important; gap: 30px !important; }
+footer { padding: 40px 16px !important; }
+.footer-bottom { flex-direction: column !important; gap: 8px !important; }
+.cta-band {
+padding: 40px 16px !important;
 grid-template-columns: 1fr !important;
 }
-.topbar { padding: 8px 20px; font-size: 12px; }
-.logo-banner-img { max-height: 140px; }
-nav { padding: 0 20px; justify-content: space-between; }
-.nav-links { display: none; }
-.menu-toggle { display: block; background: none; border: none; color: #C9A84C; font-size: 24px; cursor: pointer; }
-.hero { grid-template-columns: 1fr; min-height: auto; }
-.hero-left { padding: 60px 24px; }
-.hero-right { padding: 0 24px 60px; }
-.hero-stats { gap: 20px; }
-section { padding: 60px 24px; }
-#about { grid-template-columns: 1fr; }
-.about-big-text { display: none; }
-.faq-grid { grid-template-columns: 1fr; }
-.cta-band { grid-template-columns: 1fr; padding: 60px 24px; }
-.cta-band::before { display: none; }
-.footer-grid { grid-template-columns: 1fr 1fr; }
-footer { padding: 60px 24px 40px; }
-.trust-bar { padding: 24px; }
-.reviews-header { flex-direction: column; align-items: flex-start; gap: 20px; }
-#reviews { padding: 60px 24px; }
-}
-
-@media (max-width: 768px) {
-/* Fix all grids on mobile */
+.cta-band::before { display: none !important; }
 div[style*=“grid-template-columns:repeat(4”] {
 grid-template-columns: 1fr 1fr !important;
 }
 div[style*=“grid-template-columns:repeat(3”] {
-grid-template-columns: 1fr 1fr !important;
-}
-div[style*=“grid-template-columns:1fr 1fr”] {
 grid-template-columns: 1fr !important;
 }
+div[style*=“grid-template-columns:1fr 1fr”],
 div[style*=“grid-template-columns: 1fr 1fr”] {
 grid-template-columns: 1fr !important;
 }
-/* Hide hero right panel */
-.hero-right { display: none !important; }
-/* Fix section padding */
-section { padding: 60px 20px !important; }
-.hero-left { padding: 40px 20px !important; width: 100% !important; }
-.hero h1 { font-size: 52px !important; line-height: 1 !important; }
-.hero-badge { font-size: 11px !important; }
-.hero-sub { font-size: 16px !important; }
-.btn-primary, .btn-secondary { width: 100% !important; justify-content: center !important; box-sizing: border-box !important; }
-.hero-actions { flex-direction: column !important; width: 100% !important; }
-.logo-banner-img { object-position: center center !important; }
-#reviews { padding: 60px 20px !important; }
-/* Fix footer grid */
-.footer-grid { grid-template-columns: 1fr !important; }
-/* Prevent any overflow */
-body, section, .hero, nav, footer, .trust-bar, .cta-band { max-width: 100vw !important; overflow-x: hidden !important; }
-img { max-width: 100% !important; height: auto; }
-/* Fix trust bar */
-.trust-bar { padding: 20px !important; flex-direction: column !important; }
-/* Fix hero stats */
-.hero-stats { flex-wrap: wrap !important; }
-/* Fix CTA band */
-.cta-band { padding: 40px 20px !important; grid-template-columns: 1fr !important; }
+.hero-card { width: 100% !important; box-sizing: border-box !important; }
 }
-</style>
 
+</style>
 </head>
 <body>
 
